@@ -1,3 +1,6 @@
+@import 'styles/utilities/variables'
+
+
 .header
   margin: 2% auto 10%
   font-size: calc(1rem + 3vw)
@@ -24,8 +27,23 @@
 .profiles
   display: flex
   justify-content: space-around
-  margin: 10rem 0
+  //margin: 10rem 0 0
 
 .profile
   border-radius: 25px
   width: calc(5rem + 30vw)
+
+@media (max-width: $phone-screen-small)
+  .header
+    width: 50%
+
+  .content
+    width: 90%
+
+  .profiles
+    flex-direction: column
+    align-items: center
+
+  .profile
+    width: 90%
+    margin-bottom: 15vw

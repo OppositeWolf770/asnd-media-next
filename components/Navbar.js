@@ -14,7 +14,7 @@ export default function Navbar() {
                         src={"/images/ASND-logo.png"}
                         alt={"ASND Media Logo"}
                         width={350}
-                        height={0}
+                        height={200}
                     />
                 </Link>
                 <div className={styles.links}>
