@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import styles from '../styles/pages/about.module.sass'
+import Image from "next/image";
 
 export default function About() {
     return (
@@ -18,8 +19,8 @@ export default function About() {
             </div>
 
             <div className={styles.profiles}>
-                <img className={styles.profile} src="\images\bee_assets\bee_jake.jpg" alt=""></img>
-                <img className={styles.profile} src="\images\bee_assets\bee_gabe.jpg" alt=""></img>
+                <Image className={styles.profile} src="/images/bee_assets/bee_jake.jpg" alt="" width={656} height={436}></Image>
+                <Image className={styles.profile} src="/images/bee_assets/bee_gabe.jpg" alt="" width={656} height={436}></Image>
             </div>
         </>
     )
