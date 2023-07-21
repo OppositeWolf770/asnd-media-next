@@ -8,7 +8,7 @@ export default function Projects() {
         <>
             <div className={styles.projects}>
                 {projectItems.map((projectItem) => (
-                    <ProjectItem img={projectItem.img} name={projectItem.name}/>
+                    <ProjectItem img={projectItem.img} name={projectItem.name} key={projectItem.id}/>
                 ))}
             </div>
         </>

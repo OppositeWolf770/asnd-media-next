@@ -13,7 +13,7 @@ export default function Portfolio() {
 
             {slides.map((slide) => (
                 <>
-                    <div className={`${styles.header} ${slide.style}`}>
+                    <div className={`${styles.header} ${slide.style}`} key={slide.id}>
                         {slide.header}
                     </div>
                     <Slideshow slides={slide.slides}/>
