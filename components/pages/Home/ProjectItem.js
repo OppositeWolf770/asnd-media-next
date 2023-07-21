@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import styles from '../../styles/components/Home/projectItem.module.sass'
+import styles from '../../../styles/components/Home/projectItem.module.sass'
 
 export default function ProjectItem({ img, name }) {
     return (

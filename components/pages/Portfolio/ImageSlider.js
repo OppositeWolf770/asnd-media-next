@@ -1,6 +1,6 @@
 import { useState, CSSProperties } from "react"
 
-import styles from 'styles/components/Portfolio/imageSlider.module.sass'
+import styles from '@/styles/components/Portfolio/imageSlider.module.sass'
 
 export default function ImageSlider({ slides }){
     const [currentIndex, setCurrentIndex] = useState(0);

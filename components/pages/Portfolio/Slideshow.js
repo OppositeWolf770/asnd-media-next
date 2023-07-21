@@ -1,6 +1,6 @@
-import ImageSlider from "@/components/Portfolio/ImageSlider";
+import ImageSlider from "@/components/pages/Portfolio/ImageSlider";
 
-import styles from 'styles/components/Portfolio/slideshow.module.sass'
+import styles from '@/styles/components/Portfolio/slideshow.module.sass'
 
 export default function Slideshow({slides}) {
     return (

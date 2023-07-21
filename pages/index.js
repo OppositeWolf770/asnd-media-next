@@ -4,7 +4,8 @@ import Navbar from "@/components/Navbar";
 import Head from "next/head";
 import styles from '../styles/pages/home.module.sass'
 import Link from "next/link";
-import Projects from "@/components/Home/Projects";
+import Projects from "@/components/pages/Home/Projects";
+
 
 const inter = Inter({ subsets: ['latin'] })
 
