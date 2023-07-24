@@ -2,7 +2,7 @@ import { useState, CSSProperties } from "react"
 
 import styles from '@/styles/components/Portfolio/imageSlider.module.sass'
 
-export default function ImageSlider({ slides }){
+export default function ImageSlider({ slides }) {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const goToPrevious = () => {
@@ -17,33 +17,16 @@ export default function ImageSlider({ slides }){
         setCurrentIndex(newIndex)
     }
 
-
-    if (slides.length === 1) {
-        return (
-            <div style={{
-                height: '100%',
-                position: 'relative'
-            }} className={styles.sliderStyles}>
-                <div style={{
-                    width: '100%',
-                    height: '100%',
-                    borderRadius: '10px',
-                    backgroundPosition: 'center',
-                    backgroundSize: 'cover',
-                    backgroundImage: `url(${slides[currentIndex].url})`,
-                }}>
-                </div>
-            </div>
-        )
-    }
-
     return (
         <div style={{
             height: '100%',
             position: 'relative'
         }} className={styles.sliderStyles}>
-            <div className={`${styles.arrow} ${styles.arrowLeft}`} onClick={goToPrevious}>←</div>
-            <div className={`${styles.arrow} ${styles.arrowRight}`} onClick={goToNext}>→</div>
+            {slides.length > 1 ?
+                <>
+                    <div className={`${styles.arrow} ${styles.arrowLeft}`} onClick={goToPrevious}>←</div>
+                    <div className={`${styles.arrow} ${styles.arrowRight}`} onClick={goToNext}>→</div>
+                </> : <></>}
             <div style={{
                 width: '100%',
                 height: '100%',
@@ -51,7 +34,9 @@ export default function ImageSlider({ slides }){
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
                 backgroundImage: `url(${slides[currentIndex].url})`,
-            }}></div>
+            }}>
+            </div>
+
         </div>
     )
 }
