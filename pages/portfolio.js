@@ -4,6 +4,14 @@ import { slides } from "@/components/data/slides"
 import styles from 'styles/pages/portfolio.module.sass'
 
 export default function Portfolio() {
+
+    async function handleClick() {
+        const response = await fetch('https://localhost:3000/api/mongodb')
+        const data = await response.json()
+
+        console.log(data)
+    }
+
     return (
         <>
             <Head>
@@ -16,9 +24,11 @@ export default function Portfolio() {
                     <div className={`${styles.header} ${slide.style}`} key={slide.id}>
                         {slide.header}
                     </div>
-                    <Slideshow slides={slide.slides}/>
+                    <Slideshow slides={slide.slides} />
                 </>
             ))}
+
+            <button onClick={handleClick}>Test Function</button>
         </>
     )
 }
