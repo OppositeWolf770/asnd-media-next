@@ -1,31 +1,47 @@
 // require('dotenv').config()
-const { MongoClient } = require("mongodb");
+// const { MongoClient } = require("mongodb");
+//
+// // Replace the uri string with your connection string.
+// const uri = "mongodb+srv://oppositewolf770:Trimming2-Legible0-Immortal9-Tapestry4@asnd-media-next.4czmmqt.mongodb.net/?retryWrites=true&w=majority";
+// const client = new MongoClient(uri);
+//
+// let movie;
+//
+// async function run() {
+//   try {
+//     const database = client.db('sample_mflix');
+//     const movies = database.collection('movies');
+//
+//     // Query for a movie that has the title 'Back to the Future'
+//     const query = { title: 'Back to the Future' };
+//     movie = await movies.findOne(query);
+//   } catch (e) {
+//     movie = e.message
+//   }
+//   finally {
+//     // Ensures that the client will close when you finish/error
+//     await client.close();
+//   }
+// }
+//
+// run().catch(console.dir);
 
-// Replace the uri string with your connection string.
-const uri = "mongodb+srv://oppositewolf770:Trimming2-Legible0-Immortal9-Tapestry4@asnd-media-next.4czmmqt.mongodb.net/?retryWrites=true&w=majority";
-const client = new MongoClient(uri);
-
-let movie;
-
-async function run() {
-  try {
-    const database = client.db('sample_mflix');
-    const movies = database.collection('movies');
-
-    // Query for a movie that has the title 'Back to the Future'
-    const query = { title: 'Back to the Future' };
-    movie = await movies.findOne(query);
-  } finally {
-    // Ensures that the client will close when you finish/error
-    await client.close();
-  }
+// import { NextResponse } from 'next/server';
+// import type { NextRequest } from 'next/server';
+export function GET(request, response) {
+  return response.json(
+      {
+        body: "hello world"
+      },
+      {
+        status: 200,
+      },
+  );
 }
 
-run().catch(console.dir);
-
-const test = (request, response) =>
-  response.send({
-    data: movie
-  })
-
-export default test
+// const data = (request, response) =>
+//   response.send({
+//     data: 'hello world'
+//   })
+//
+// export default data

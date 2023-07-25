@@ -6,7 +6,7 @@ import styles from 'styles/pages/portfolio.module.sass'
 export default function Portfolio() {
 
     async function handleClick() {
-        const response = await fetch('https://localhost:3000/api/mongodb')
+        const response = await fetch('https://asnd-media-next-git-mongodbbeta-oppositewolf770.vercel.app/api/mongodb')
         const data = await response.json()
 
         console.log(data)
