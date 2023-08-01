@@ -7,6 +7,10 @@ import styles from '../styles/components/navbar.module.sass'
 export default function Navbar() {
     return (
         <>
+            <header>
+                <a href="#main" className={styles.skip}>Skip to main content</a>
+            </header>
+
             <nav className={styles.topnav}>
                 <Link href={"/"}>
                     <Image
