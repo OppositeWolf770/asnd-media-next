@@ -34,5 +34,4 @@ yarn-error.log*
 # vscode
 .vscode
 
-# Visual Studio
-.vs
+.env
