@@ -5,19 +5,6 @@ import styles from "../styles/pages/contact.module.scss";
 import ContactForm from "@/components/pages/ContactForm/ContactForm";
 
 export default function Contact() {
-  const [info, setInfo] = useState("");
-
-  async function handleClick() {
-    const res = await fetch("http://localhost:3000/api/mongodb");
-    const data = await res.json();
-
-    const array = Object.keys(data);
-
-    console.log(data);
-
-    // setInfo(array);
-  }
-
   return (
     <>
       <Head>
@@ -35,10 +22,6 @@ export default function Contact() {
         {/*<form className="contact--form" action="https://submit-form.com/XyCS6cZd" method="post">*/}
 
         <ContactForm />
-      </div>
-      <div>
-        <div>{info}</div>
-        <button onClick={handleClick}>Click Function</button>
       </div>
     </>
   );
