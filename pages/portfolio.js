@@ -1,19 +1,18 @@
 import Head from "next/head";
 import Slideshow from "@/components/pages/Portfolio/Slideshow";
-import { slides } from "@/components/data/slides";
+
 import styles from "@/styles/pages/portfolio.module.scss";
 
-export default function Portfolio() {
-  async function handleClick() {
-    const response = await fetch(
-      // "https://asnd-media-next-git-mongodbbeta-oppositewolf770.vercel.app/api/mongodb"
-      "http:localhost:3000/api/mongodb"
-    );
-    const data = await response.json();
+export const getServerSideProps = async () => {
+  const res = await fetch("http://asnd-media.com/api/fetchSlides");
+  const data = await res.json();
 
-    console.log(data);
-  }
+  const body = data.body;
 
+  return { props: { body } };
+};
+
+export default function Portfolio({ body }) {
   return (
     <>
       <Head>
@@ -23,16 +22,23 @@ export default function Portfolio() {
         Some Examples of our Work
       </div>
 
-      {slides.map((slide) => (
-        <>
-          <div className={`${styles.header} ${slide.style}`} key={slide.id}>
-            {slide.header}
-          </div>
-          <Slideshow slides={slide.slides} />
-        </>
-      ))}
-
-      <button onClick={handleClick}>Test Function</button>
+      {body.map((slide) =>
+        slide.id % 2 === 0 ? (
+          <>
+            <div className={`${styles.header} ${styles.headerRight}`}>
+              {slide.header}
+            </div>
+            <Slideshow slides={slide.slides} />
+          </>
+        ) : (
+          <>
+            <div className={`${styles.header} ${styles.headerLeft}`}>
+              {slide.header}
+            </div>
+            <Slideshow slides={slide.slides} />
+          </>
+        )
+      )}
     </>
   );
 }
