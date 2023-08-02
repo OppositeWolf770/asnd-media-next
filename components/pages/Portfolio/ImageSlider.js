@@ -50,7 +50,7 @@ export default function ImageSlider({ slides }) {
           borderRadius: "10px",
           backgroundPosition: "center",
           backgroundSize: "cover",
-          backgroundImage: `url(${slides[currentIndex].url})`,
+          backgroundImage: `url(${slides[currentIndex]})`,
         }}
       ></div>
     </div>
