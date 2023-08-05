@@ -12,33 +12,37 @@ export default function ContactForm() {
 
   const [response, setResponse] = useState();
 
-  async function handleSubmit(event) {
-    event.preventDefault();
-
-    try {
-      const res = await fetch(".netlify/functions/submit", {
-        method: "POST",
-        body: JSON.stringify({ firstName, lastName, email, message }),
-      }).then((res) => res.json());
-      setResponse(res);
-      setButtonMsg("Email Sent!");
-    } catch (e) {
-      setButtonMsg("Could not send email. Please contact them directly.");
-    }
-
-    setFirstName("");
-    setLastName("");
-    setEmail("");
-    setMessage("");
-
-    setTimeout(function () {
-      setButtonMsg("Send");
-    }, 5000);
-  }
+  // async function handleSubmit(event) {
+  //   event.preventDefault();
+  //
+  //   try {
+  //     const res = await fetch(".netlify/functions/submit", {
+  //       method: "POST",
+  //       body: JSON.stringify({ firstName, lastName, email, message }),
+  //     }).then((res) => res.json());
+  //     setResponse(res);
+  //     setButtonMsg("Email Sent!");
+  //   } catch (e) {
+  //     setButtonMsg("Could not send email. Please contact them directly.");
+  //   }
+  //
+  //   setFirstName("");
+  //   setLastName("");
+  //   setEmail("");
+  //   setMessage("");
+  //
+  //   setTimeout(function () {
+  //     setButtonMsg("Send");
+  //   }, 5000);
+  // }
 
   return (
     <>
-      <form className={styles.form} onSubmit={handleSubmit}>
+      <form
+        className={styles.form}
+        action="https://submit-form.com/XyCS6cZd"
+        method="post"
+      >
         <div className={`${styles.label} ${styles.nameLabel}`}>Name *</div>
         <div className={styles.nameboxes}>
           <div className={styles.name}>
