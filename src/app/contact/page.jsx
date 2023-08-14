@@ -1,5 +1,3 @@
-import Head from "next/head";
-
 import styles from "./contact.module.scss";
 import ContactForm from "./ContactForm";
 

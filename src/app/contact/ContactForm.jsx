@@ -1,18 +1,18 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 
-import styles from './contact.module.scss';
+import styles from "./contact.module.scss";
 
 export default function ContactForm() {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
-  const [buttonMsg, setButtonMsg] = useState('Send');
+  const [buttonMsg, setButtonMsg] = useState("Send");
 
-  const [response, setResponse] = useState();
+  // const [response, setResponse] = useState();
 
   // async function handleSubmit(event) {
   //   event.preventDefault();

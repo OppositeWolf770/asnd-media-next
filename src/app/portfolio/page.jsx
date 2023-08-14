@@ -14,7 +14,7 @@ import { createClient } from "@supabase/supabase-js";
 //   return { props: { body } };
 // };
 
-export default async function Portfolio({ body }) {
+export default async function Portfolio() {
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 

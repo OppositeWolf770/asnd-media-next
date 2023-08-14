@@ -1,5 +1,3 @@
-import Head from "next/head";
-
 import styles from "./about.module.scss";
 import Image from "next/image";
 
