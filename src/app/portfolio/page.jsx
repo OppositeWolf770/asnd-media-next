@@ -5,15 +5,6 @@ import styles from "./portfolio.module.scss";
 
 import { createClient } from "@supabase/supabase-js";
 
-// export const getServerSideProps = async () => {
-//   const res = await fetch('http://asnd-media.com/api/fetchSlides');
-//   const data = await res.json();
-
-//   const body = data.body;
-
-//   return { props: { body } };
-// };
-
 export default async function Portfolio() {
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
