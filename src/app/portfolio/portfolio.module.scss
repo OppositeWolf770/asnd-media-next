@@ -1,0 +1,26 @@
+.content {
+  margin-bottom: 5vw;
+  font-size: calc(1rem + 3vw);
+  padding: 2%;
+  width: 50%;
+  text-align: center;
+  margin-left: 40%;
+}
+.header {
+  background-color: #220001;
+  color: white;
+  width: 30%;
+  padding: 0.3rem;
+  font-size: calc(1rem + 2vw);
+  text-align: center;
+  margin-bottom: 1%;
+  border-radius: 15px;
+
+  &Left {
+    margin-left: 10%;
+  }
+  &Right {
+    margin-right: 10%;
+    margin-left: auto;
+  }
+}

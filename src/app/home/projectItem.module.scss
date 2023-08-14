@@ -1,0 +1,20 @@
+@import "src/styles/variables";
+
+
+.projectItem {
+  display: flex;
+  flex-direction: column;
+}
+.image {
+  width: 350px;
+  height: 250px;
+}
+.name {
+  color: white;
+  margin-top: 1rem;
+}
+@media (max-width: $phone-screen-small) {
+  .projectItem {
+    margin: 0 auto;
+  }
+};
