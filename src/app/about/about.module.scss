@@ -1,7 +1,8 @@
 @import 'src/styles/variables';
 
 .header {
-  margin: 0 auto 150px;
+  //margin: 0 auto 150px;
+  margin: 0 auto 5rem;
   //font-size: calc(1rem + 3vw);
   font-size: $header-lg;
   padding: 1rem 3rem;
@@ -16,13 +17,15 @@
 
   width: fit-content;
   padding: 50px;
+  margin: 0 auto;
+  width: 70%;
   //margin: 0 auto 50px;
-  margin: 0 10rem;
+  //margin: 0 10rem;
   gap: 60px;
 }
 .subheader {
   //font-size: calc(1rem + 2vw);
-  font-size: $subheader-lg;
+  font-size: $header-sm;
   font-weight: bold;
 }
 .text {
@@ -46,7 +49,7 @@
     font-size: $header-sm;
   }
   .subheader{
-    font-size: $subheader-sm;
+    font-size: $subheader-m;
   }
   .text{
     font-size: $text-sm;
