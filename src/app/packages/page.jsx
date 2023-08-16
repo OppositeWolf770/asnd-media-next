@@ -2,8 +2,6 @@ import Link from "next/link";
 
 import styles from "./packages.module.scss";
 
-// TODO re-enable the list style type bullet points
-
 export const metadata = {
   title: "ASND Media - Packages",
 };
@@ -18,7 +16,11 @@ export default function Packages() {
           <div className={styles.subheader}>
             Starter Boost -{" "}
             <Link href={"/contact"} className={styles.link}>
-              <span className={"text-red-600 underline underline-offset-4"}>
+              <span
+                className={
+                  "text-red-600 underline underline-offset-4 hover:text-red-500 transition"
+                }
+              >
                 Contact Us
               </span>
             </Link>
@@ -47,7 +49,13 @@ export default function Packages() {
           <div className={`text-red-600 ${styles.subtext}`}>
             **Paid/Boosted Ad Campaigns Charged Separately -{" "}
             <Link href={"/contact"} className={styles.link}>
-              <span className={"underline"}>Contact Us</span>
+              <span
+                className={
+                  "underline text-red-700 hover:text-red-500 transition"
+                }
+              >
+                Contact Us
+              </span>
             </Link>
           </div>
         </div>
@@ -56,7 +64,11 @@ export default function Packages() {
           <div className={styles.subheader}>
             Monthly Boost -{" "}
             <Link href={"/contact"} className={styles.link}>
-              <span className={"text-red-600 underline underline-offset-4"}>
+              <span
+                className={
+                  "text-red-600 underline underline-offset-4 hover:text-red-500 transition"
+                }
+              >
                 Contact Us
               </span>
             </Link>
@@ -78,7 +90,11 @@ export default function Packages() {
           <div className={styles.subheader}>
             Website Boost -{" "}
             <Link href={"/contact"} className={styles.link}>
-              <span className={"text-red-600 underline underline-offset-4"}>
+              <span
+                className={
+                  "text-red-600 underline underline-offset-4 hover:text-red-500 transition"
+                }
+              >
                 Contact Us
               </span>
             </Link>
