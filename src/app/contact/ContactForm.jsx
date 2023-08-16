@@ -87,7 +87,7 @@ export default function ContactForm() {
 
         <div className={styles.label}>Message *</div>
         <textarea
-          id={styles.message}
+          className={styles.message}
           name="message"
           placeholder="Message"
           rows={5}
