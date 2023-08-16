@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Slideshow from "./Slideshow";
 
 import styles from "./portfolio.module.scss";
