@@ -22,7 +22,7 @@ export default function Home() {
         </Link>
       </div>
 
-      <Projects />
+      {/*<Projects />*/}
     </>
   );
 }
