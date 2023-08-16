@@ -1,12 +1,15 @@
 import styles from "./home.module.scss";
 import Link from "next/link";
 import Projects from "./Projects";
+import { redirect } from "next/navigation";
 
 export const metadata = {
   title: "ASND Media - Home",
 };
 
 export default function Home() {
+  redirect("/");
+
   return (
     <>
       <div className={`contentBox ${styles.content}`}>
