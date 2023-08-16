@@ -6,7 +6,7 @@ import AuthProvider from "@/src/components/AuthProvider";
 import Navbar from "@/src/components/Layout/Navbar";
 import Footer from "@/src/components/Layout/Footer";
 
-import "src/styles/globals.css";
+import "src/styles/globals.scss";
 import styles from "@/src/styles/Layout/navbar.module.scss";
 
 // do not cache this layout
