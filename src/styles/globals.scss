@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Source+Serif+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+@import 'src/styles/variables';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -55,8 +57,6 @@
   }
 }
 
-
-
 html {
   margin: 0;
   padding: 0;
@@ -80,8 +80,10 @@ footer {
 }
 
 .loading {
-  width: 30%;
-  font-size: 50px;
+  /*width: 30%;*/
+  width: fit-content;
+  /*font-size: 50px;*/
+  font-size: $header-sm;
   padding: 30px 15px;
   text-align: center;
   margin: 0 auto;
