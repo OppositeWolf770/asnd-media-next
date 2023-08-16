@@ -8,6 +8,7 @@ import Footer from "@/src/components/Layout/Footer";
 
 import "src/styles/globals.scss";
 import styles from "@/src/styles/Layout/navbar.module.scss";
+import { Analytics } from "@vercel/analytics/react";
 
 // do not cache this layout
 export const revalidate = 0;
@@ -36,6 +37,7 @@ export default async function RootLayout({ children }) {
         <footer>
           <Footer />
         </footer>
+        <Analytics />
       </body>
     </html>
   );
