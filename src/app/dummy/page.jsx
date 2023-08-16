@@ -1,6 +1,5 @@
 "use client";
 
-import Loading from "@/src/app/loading";
 import { createClient } from "@supabase/supabase-js";
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
