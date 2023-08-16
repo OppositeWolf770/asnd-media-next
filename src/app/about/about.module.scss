@@ -1,27 +1,33 @@
 @import 'src/styles/variables';
 
 .header {
-  margin: 2% auto 10%;
-  font-size: calc(1rem + 3vw);
-  padding: 0.9rem;
+  margin: 0 auto 150px;
+  //font-size: calc(1rem + 3vw);
+  font-size: $header-lg;
+  padding: 1rem 3rem;
   text-align: center;
-  width: 20%;
+  width: fit-content;
 }
 .content {
   display: flex;
   flex-direction: column;
   text-align: center;
-  width: 65%;
+  //width: 65%;
+
+  width: fit-content;
   padding: 50px;
-  margin: 0 auto 50px;
-  gap: 45px;
+  //margin: 0 auto 50px;
+  margin: 0 10rem;
+  gap: 60px;
 }
 .subheader {
-  font-size: calc(1rem + 2vw);
+  //font-size: calc(1rem + 2vw);
+  font-size: $subheader-lg;
   font-weight: bold;
 }
 .text {
-  font-size: calc(1rem + 0.75vw);
+  //font-size: calc(1rem + 0.75vw);
+  font-size: $text-lg;
 }
 .profiles {
   display: flex;
@@ -35,10 +41,23 @@
 }
 @media (max-width: $phone-screen-small) {
   .header {
-    width: 50%;
+    //width: 90%;
+    width: fit-content;
+    font-size: $header-sm;
+  }
+  .subheader{
+    font-size: $subheader-sm;
+  }
+  .text{
+    font-size: $text-sm;
   }
   .content {
-    width: 90%;
+    //width: 90%;
+    width: fit-content;
+    //gap: 40px;
+    gap: 2rem;
+    padding: 2rem;
+    margin: 0 1rem;
   }
   .profiles {
     flex-direction: column;

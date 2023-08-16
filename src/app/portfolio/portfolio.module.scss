@@ -1,17 +1,23 @@
+@import 'src/styles/variables';
+
 .content {
   margin-bottom: 5vw;
-  font-size: calc(1rem + 3vw);
+  //font-size: calc(1rem + 3vw);
+  font-size: $header-lg;
   padding: 2%;
-  width: 50%;
+  //width: 50%;
+  width: fit-content;
   text-align: center;
   margin-left: 40%;
 }
 .header {
   background-color: #220001;
   color: white;
-  width: 30%;
-  padding: 0.3rem;
-  font-size: calc(1rem + 2vw);
+  //width: 30%;
+  width: fit-content;
+  padding: 0.6rem;
+  //font-size: calc(1rem + 2vw);
+  font-size: $header-sm;
   text-align: center;
   margin-bottom: 1%;
   border-radius: 15px;
@@ -22,5 +28,18 @@
   &Right {
     margin-right: 10%;
     margin-left: auto;
+  }
+}
+
+@media (max-width: $phone-screen-large) {
+  .content {
+    //width: 90%;
+    width: fit-content;
+    font-size: $subheader-lg;
+    margin: 0 auto;
+  }
+
+  .header {
+    font-size: $text-lg;
   }
 }

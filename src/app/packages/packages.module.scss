@@ -9,11 +9,14 @@
   text-align: center;
   margin: 2% auto 10%;
   padding: 1rem;
-  font-size: calc(1rem + 3vw);
-  width: 30%;
+  //font-size: calc(1rem + 3vw);
+  font-size: $header-lg;
+  //width: 30%;
+  width: fit-content;
 }
 .content {
   width: 30%;
+  //width: fit-content;
   display: flex;
   flex-direction: column;
   padding: 16px;
@@ -22,16 +25,27 @@
   ul {
     display: flex;
     flex-direction: column;
-    font-size: calc(1rem + 0.25vw);
+    list-style-type: disc;
+    padding-left: 2rem;
+
+    //font-size: calc(1rem + 0.25vw);
+    font-size: $text-sm;
     gap: 0.5rem;
+
+    ul {
+      list-style-type: circle;
+    }
   }
 }
 .subtext {
-  font-size: calc(1rem + 0.05vw);
+  //font-size: calc(1rem + 0.05vw);
+  //font-size: 20px;
+  font-size: 16px;
 }
 .subheader {
   text-align: center;
-  font-size: calc(1rem + 1vw);
+  //font-size: calc(1rem + 1vw);
+  font-size: $subheader-m;
 
   a {
     text-decoration: none;
@@ -40,12 +54,20 @@
 @media (max-width: $phone-screen-small) {
   .wrapper {
     flex-direction: column;
+    margin-bottom: 0;
   }
   .header {
-    width: 70%;
+    //width: 70%;
+    font-size: $header-sm;
+    width: fit-content;
+    margin: 0 50px 50px;
   }
   .content {
     width: 90%;
     margin: 0 auto 5rem;
+  }
+
+  .subheader {
+    font-size: $subheader-sm;
   }
 }
