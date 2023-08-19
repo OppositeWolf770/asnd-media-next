@@ -2,6 +2,7 @@ import { redirect } from "next/navigation";
 import { createClient } from "@supabase/supabase-js";
 import styles from "@/src/app/home/home.module.scss";
 import Link from "next/link";
+import Test from "@/src/app/home/Test";
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
@@ -24,6 +25,8 @@ export default async function Index() {
           <button className={styles.button}>Boost Packages</button>
         </Link>
       </div>
+
+      <Test />
 
       {/*<Projects />*/}
     </>

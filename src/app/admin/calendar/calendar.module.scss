@@ -1,0 +1,12 @@
+.calendar {
+  border: white solid 2px;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.day {
+  width: 200px;
+  height: 200px;
+  background-color: darkred;
+  border: white dashed 1px;
+}

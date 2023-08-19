@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 
@@ -10,7 +10,7 @@ export default function SignOut() {
 
     if (error) {
       // eslint-disable-next-line no-console
-      console.error('ERROR:', error);
+      console.error("ERROR:", error);
     }
   }
 
